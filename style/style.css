@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1500px; /* Menambahkan perspektif untuk efek 3D */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+
+.motors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    border: 2px dashed #ddd;
+    border-radius: 50%;
+}
+
+.motor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.motor {
+    width: 30px;
+    height: 80px;
+    background-color: #3498db;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    transform-origin: center;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+input[type="range"] {
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+/* Motor Positioning */
+#motor1 {
+    top: 10px;
+    left: 10px;
+}
+
+#motor2 {
+    top: 10px;
+    right: 10px;
+}
+
+#motor3 {
+    bottom: 10px;
+    left: 10px;
+}
+
+#motor4 {
+    bottom: 10px;
+    right: 10px;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.drone {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d; /* Menjaga transformasi 3D */
+    z-index: 5; /* Menempatkan gambar drone di bawah kontrol */
+}
+
+#droneImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotateX(0deg) rotateY(0deg); /* Menambahkan rotasi 3D */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

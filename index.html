@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Motor Speed Control</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="motors">
+            <div class="motor" id="motor1"></div>
+            <div class="motor" id="motor2"></div>
+            <div class="motor" id="motor3"></div>
+            <div class="motor" id="motor4"></div>
+            <div class="drone">
+                <img src="https://static.vecteezy.com/system/resources/previews/012/104/982/original/drone-icon-transparent-free-png.png" id="droneImage" alt="Drone">
+            </div>
+        </div>
+        <div class="control-panel">
+            <h1>Drone Motor Speed Control</h1>
+            <div class="motor-container">
+                <p>Motor 1</p>
+                <input type="range" class="speed-control" id="speed1" min="0" max="100" value="0">
+                <span id="speedValue1">0 RPM</span>
+            </div>
+            <div class="motor-container">
+                <p>Motor 2</p>
+                <input type="range" class="speed-control" id="speed2" min="0" max="100" value="0">
+                <span id="speedValue2">0 RPM</span>
+            </div>
+            <div class="motor-container">
+                <p>Motor 3</p>
+                <input type="range" class="speed-control" id="speed3" min="0" max="100" value="0">
+                <span id="speedValue3">0 RPM</span>
+            </div>
+            <div class="motor-container">
+                <p>Motor 4</p>
+                <input type="range" class="speed-control" id="speed4" min="0" max="100" value="0">
+                <span id="speedValue4">0 RPM</span>
+            </div>
+        </div>
+    </div>
+    <script src="java/index.js"></script>
+</body>
+</html>
